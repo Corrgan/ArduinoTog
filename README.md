@@ -8,3 +8,5 @@ Fällt dieser aus, fehlen der Öltemperaturanzeige im Schalttafeleinsatz die Wer
 Mit einem Arduino Nano, einem Öltemperaturfühler und der Code in der .ino Datei kann erstens das piepen unterbunden werden und zweitens die Öltemperatur richtig angezeigt werden.
 
 Dieses Projekt ist angelehnt und ist im Sinne dem TinyTog nachprogrammiert.
+
+Falls jemand ne Idee hat, den code zu verbessern immer her damit! :)
