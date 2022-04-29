@@ -24,7 +24,8 @@ void loop() {
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(26.25);
+  delay(26);
+  delayMicroseconds(250);
   digitalWrite(togout, HIGH);
   delay(27);
   digitalWrite(togout, LOW);
@@ -35,7 +36,8 @@ void loop() {
   digitalWrite(togout, LOW);
   delay(27);
   digitalWrite(togout, HIGH);
-  delay(27.75);
+  delay(27);
+  delayMicroseconds(750);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 915 and togin >= 889){ // 70
@@ -44,16 +46,19 @@ void loop() {
   digitalWrite(togout, LOW);
   delay(28);
   digitalWrite(togout, HIGH);
-  delay(28.25);
+  delay(28);
+  delayMicroseconds(250);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 889 and togin >= 863){ // 75
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(28.5);
+  delay(28);
+  delayMicroseconds(500);
   digitalWrite(togout, HIGH);
-  delay(29.25);
+  delay(29);
+  delayMicroseconds(250);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 863 and togin >= 839){ // 80
@@ -69,9 +74,11 @@ void loop() {
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(30.25);
+  delay(30);
+  delayMicroseconds(250);
   digitalWrite(togout, HIGH);
-  delay(30.75);
+  delay(30);
+  delayMicroseconds(750);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 815 and togin >= 782){ // 90
@@ -80,25 +87,30 @@ void loop() {
   digitalWrite(togout, LOW);
   delay(31);
   digitalWrite(togout, HIGH);
-  delay(31.5);
+  delay(31);
+  delayMicroseconds(500);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 782 and togin >= 755){ // 95
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(31.75);
+  delay(31);
+  delayMicroseconds(750);
   digitalWrite(togout, HIGH);
-  delay(32.5);
+  delay(32);
+  delayMicroseconds(500);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 755 and togin >= 726){ // 100
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(32.5);
+  delay(32);
+  delayMicroseconds(500);
   digitalWrite(togout, HIGH);
-  delay(33.25);
+  delay(33);
+  delayMicroseconds(250);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 726 and togin >= 700){ // 105
@@ -168,7 +180,8 @@ void loop() {
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(39.25);
+  delay(39);
+  delayMicroseconds(250);
   digitalWrite(togout, HIGH);
   delay(40);
   digitalWrite(togout, LOW);
@@ -179,7 +192,8 @@ void loop() {
   digitalWrite(togout, LOW);
   delay(40);
   digitalWrite(togout, HIGH);
-  delay(40.75);
+  delay(40);
+  delayMicroseconds(750);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 414 and togin >= 384){ // 150
@@ -188,43 +202,52 @@ void loop() {
   digitalWrite(togout, LOW);
   delay(41);
   digitalWrite(togout, HIGH);
-  delay(41.75);
+  delay(41);
+  delayMicroseconds(750);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 384 and togin >= 359){ // 155
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(41.75);
+  delay(41);
+  delayMicroseconds(750);
   digitalWrite(togout, HIGH);
-  delay(42.75);
+  delay(42);
+  delayMicroseconds(750);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 359 and togin >= 332){ // 160
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(42.75);
+  delay(42);
+  delayMicroseconds(750);
   digitalWrite(togout, HIGH);
-  delay(43.5);
+  delay(43);
+  delayMicroseconds(500);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 332 and togin >= 323){ // 170
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(44.5);
+  delay(44);
+  delayMicroseconds(500);
   digitalWrite(togout, HIGH);
-  delay(45.25);
+  delay(45);
+  delayMicroseconds(250);
   digitalWrite(togout, LOW);
   delay(250);}
   else if   (togin < 323){ // 170
   digitalWrite(togout, HIGH); // sets the tog on
   delay(20);
   digitalWrite(togout, LOW);
-  delay(44.5);
+  delay(44);
+  delayMicroseconds(500);
   digitalWrite(togout, HIGH);
-  delay(45.25);
+  delay(45);
+  delayMicroseconds(250);
   digitalWrite(togout, LOW);
   delay(250);}
 
