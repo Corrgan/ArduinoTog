@@ -4,7 +4,7 @@
 
 const int DELAY_TIMES[] = {41, 60, 65, 70, 75, 80, 85, 90, 95, 100, 105, 110};
 const int ANALOG_VALUES[] = {983, 939, 915, 889, 863, 839, 815, 782, 755, 726, 700, 663};
-const int NUM_TEMP_LEVELS = sizeof(DELAY_TIMES) / sizeof(DELAY_TIMES[0]);
+const int NUM_TEMP_LEVELS = sizeof(ANALOG_VALUES) / sizeof(ANALOG_VALUES[0]);
 
 void setup() {
   pinMode(TOG_OUT, OUTPUT);
@@ -23,13 +23,19 @@ void loop() {
     }
   }
   if (temp_level != -1) {
-    digitalWrite(TOG_OUT, HIGH);
-    delay(20);
-    digitalWrite(TOG_OUT, LOW);
-    int delay_time = DELAY_TIMES[temp_level];
-    int delay_ms = (delay_time * 1000) / 16;
-    delay(delay_ms);
+    pulsePattern(DELAY_TIMES[temp_level]);
   } else {
     digitalWrite(TOG_OUT, LOW);
   }
+  delay(250); // Add a delay to match the original code's loop timing
+}
+
+void pulsePattern(int delay_time) {
+  digitalWrite(TOG_OUT, HIGH);
+  delay(20);
+  digitalWrite(TOG_OUT, LOW);
+  delay(delay_time);
+  digitalWrite(TOG_OUT, HIGH);
+  delay(delay_time + 1); // Assuming the second pulse is slightly longer
+  digitalWrite(TOG_OUT, LOW);
 }
