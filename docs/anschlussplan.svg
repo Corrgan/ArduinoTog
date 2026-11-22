@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1754" font-family="DejaVu Sans, sans-serif"><rect width="1240" height="1754" fill="#ffffff"/>
+<text x="60" y="80" font-size="46" font-weight="700" fill="#1a1a19" text-anchor="start">Betty-Wandler – Anschlussplan</text>
+<text x="60" y="122" font-size="24" font-weight="400" fill="#5f5e58" text-anchor="start">Tankanzeige + Öltemperatur/TOG + ABS-Leuchte · VW T3 Syncro mit Audi-A6-Kombi</text>
+<rect x="420" y="620" width="400" height="520" rx="14" fill="#eef4fc" stroke="#2a78d6" stroke-width="3"/>
+<text x="620.0" y="662" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="middle"></text>
+<text x="620" y="880" font-size="34" font-weight="700" fill="#1a1a19" text-anchor="middle">BETTY-WANDLER</text>
+<text x="620" y="915" font-size="20" font-weight="400" fill="#5f5e58" text-anchor="middle">Arduino Nano · USB nach links</text>
+<text x="590" y="1014" font-size="22" font-weight="700" fill="#1a1a19" text-anchor="middle"></text>
+<rect x="450" y="1030" width="62" height="62" rx="8" fill="#ffffff" stroke="#c99a00" stroke-width="5"/>
+<circle cx="481" cy="1061" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="481" y="1122" font-size="20" font-weight="700" fill="#c99a00" text-anchor="middle">ÖL</text>
+<rect x="520" y="1030" width="62" height="62" rx="8" fill="#ffffff" stroke="#1baf7a" stroke-width="5"/>
+<circle cx="551" cy="1061" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="551" y="1122" font-size="20" font-weight="700" fill="#1baf7a" text-anchor="middle">GEBER</text>
+<rect x="590" y="1030" width="62" height="62" rx="8" fill="#ffffff" stroke="#222222" stroke-width="5"/>
+<circle cx="621" cy="1061" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="621" y="1122" font-size="20" font-weight="700" fill="#222222" text-anchor="middle">GND</text>
+<rect x="660" y="1030" width="62" height="62" rx="8" fill="#ffffff" stroke="#d0342c" stroke-width="5"/>
+<circle cx="691" cy="1061" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="691" y="1122" font-size="20" font-weight="700" fill="#d0342c" text-anchor="middle">+12V</text>
+<text x="620" y="1006" font-size="22" font-weight="700" fill="#1a1a19" text-anchor="middle">Klemme UNTEN</text>
+<text x="590" y="664" font-size="22" font-weight="700" fill="#1a1a19" text-anchor="middle"></text>
+<rect x="450" y="680" width="62" height="62" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="5"/>
+<circle cx="481" cy="711" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="481" y="772" font-size="20" font-weight="700" fill="#eb6834" text-anchor="middle">A</text>
+<rect x="520" y="680" width="62" height="62" rx="8" fill="#ffffff" stroke="#7a7a74" stroke-width="5"/>
+<circle cx="551" cy="711" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="551" y="772" font-size="20" font-weight="700" fill="#7a7a74" text-anchor="middle">B</text>
+<rect x="590" y="680" width="62" height="62" rx="8" fill="#ffffff" stroke="#8e5bd0" stroke-width="5"/>
+<circle cx="621" cy="711" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="621" y="772" font-size="20" font-weight="700" fill="#8e5bd0" text-anchor="middle">TOG</text>
+<rect x="660" y="680" width="62" height="62" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="5"/>
+<circle cx="691" cy="711" r="12" fill="#cfcfc8" stroke="#1a1a19" stroke-width="2"/>
+<text x="691" y="772" font-size="20" font-weight="700" fill="#2a78d6" text-anchor="middle">ABS</text>
+<text x="620" y="668" font-size="20" font-weight="700" fill="#2a78d6" text-anchor="middle">Klemme OBEN</text>
+<text x="519" y="790" font-size="20" font-weight="600" fill="#eb6834" text-anchor="middle">└── TANK ──┘</text>
+<rect x="60" y="1330" width="300" height="150" rx="14" fill="#f4f3ef" stroke="#1a1a19" stroke-width="3"/>
+<text x="210.0" y="1372" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="middle">Öltemperatur-Fühler</text>
+<text x="210.0" y="1406" font-size="20" font-weight="400" fill="#5f5e58" text-anchor="middle">am Ölfilterflansch</text>
+<rect x="400" y="1330" width="280" height="150" rx="14" fill="#f4f3ef" stroke="#1a1a19" stroke-width="3"/>
+<text x="540.0" y="1372" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="middle">Tankgeber T3</text>
+<text x="540.0" y="1406" font-size="20" font-weight="400" fill="#5f5e58" text-anchor="middle">im Tank (alter Geber)</text>
+<rect x="720" y="1330" width="220" height="150" rx="14" fill="#f4f3ef" stroke="#1a1a19" stroke-width="3"/>
+<text x="830.0" y="1372" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="middle">Masse</text>
+<text x="830.0" y="1406" font-size="20" font-weight="400" fill="#5f5e58" text-anchor="middle">Karosserie / Kl. 31</text>
+<rect x="980" y="1330" width="200" height="150" rx="14" fill="#f4f3ef" stroke="#1a1a19" stroke-width="3"/>
+<text x="1080.0" y="1372" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="middle">+12 V</text>
+<text x="1080.0" y="1406" font-size="20" font-weight="400" fill="#5f5e58" text-anchor="middle">Zündungsplus Kl. 15</text>
+<path d="M481,1092 L481,1180 L210,1180 L210,1330" fill="none" stroke="#c99a00" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="224" y="1148" width="36" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="230" y="1172" font-size="21" font-weight="600" fill="#c99a00" text-anchor="start">ÖL</text>
+<path d="M551,1092 L551,1330" fill="none" stroke="#1baf7a" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="554" y="1226" width="72" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="560" y="1250" font-size="21" font-weight="600" fill="#1baf7a" text-anchor="start">GEBER</text>
+<path d="M621,1092 L621,1230 L830,1230 L830,1330" fill="none" stroke="#222222" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="694" y="1198" width="48" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="700" y="1222" font-size="21" font-weight="600" fill="#222222" text-anchor="start">GND</text>
+<path d="M691,1092 L691,1200 L1080,1200 L1080,1330" fill="none" stroke="#d0342c" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="854" y="1168" width="264" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="860" y="1192" font-size="21" font-weight="600" fill="#d0342c" text-anchor="start">+12 V (Sicherung 1 A)</text>
+<rect x="260" y="190" width="720" height="300" rx="14" fill="#f4f3ef" stroke="#1a1a19" stroke-width="3"/>
+<text x="620.0" y="232" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="middle">Kombiinstrument Audi A6 (C5)</text>
+<text x="620.0" y="266" font-size="20" font-weight="400" fill="#5f5e58" text-anchor="middle">Stecker hinten am Kombi</text>
+<rect x="300" y="300" width="150" height="150" rx="10" fill="#ffffff" stroke="#eb6834" stroke-width="4"/>
+<text x="375" y="360" font-size="20" font-weight="600" fill="#eb6834" text-anchor="middle">Tankgeber</text>
+<text x="375" y="390" font-size="20" font-weight="600" fill="#eb6834" text-anchor="middle">Eingang</text>
+<rect x="470" y="300" width="150" height="150" rx="10" fill="#ffffff" stroke="#7a7a74" stroke-width="4"/>
+<text x="545" y="360" font-size="20" font-weight="600" fill="#7a7a74" text-anchor="middle">Masse</text>
+<text x="545" y="390" font-size="20" font-weight="600" fill="#7a7a74" text-anchor="middle">(Kl.</text>
+<text x="545" y="420" font-size="20" font-weight="600" fill="#7a7a74" text-anchor="middle">31)</text>
+<rect x="640" y="300" width="150" height="150" rx="10" fill="#ffffff" stroke="#8e5bd0" stroke-width="4"/>
+<text x="715" y="360" font-size="20" font-weight="600" fill="#8e5bd0" text-anchor="middle">Öltemp.</text>
+<text x="715" y="390" font-size="20" font-weight="600" fill="#8e5bd0" text-anchor="middle">(TOG)</text>
+<rect x="810" y="300" width="150" height="150" rx="10" fill="#ffffff" stroke="#2a78d6" stroke-width="4"/>
+<text x="885" y="360" font-size="20" font-weight="600" fill="#2a78d6" text-anchor="middle">ABS</text>
+<text x="885" y="390" font-size="20" font-weight="600" fill="#2a78d6" text-anchor="middle">Warnlampe</text>
+<path d="M481,680 L481,560 L375,560 L375,450" fill="none" stroke="#eb6834" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="386" y="528" width="24" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="392" y="552" font-size="21" font-weight="600" fill="#eb6834" text-anchor="start">A</text>
+<path d="M551,680 L551,580 L545,580 L545,450" fill="none" stroke="#7a7a74" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="554" y="548" width="24" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="560" y="572" font-size="21" font-weight="600" fill="#7a7a74" text-anchor="start">B</text>
+<path d="M621,680 L621,560 L715,560 L715,450" fill="none" stroke="#8e5bd0" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="634" y="528" width="48" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="640" y="552" font-size="21" font-weight="600" fill="#8e5bd0" text-anchor="start">TOG</text>
+<path d="M691,680 L691,600 L885,600 L885,450" fill="none" stroke="#2a78d6" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="894" y="568" width="48" height="32" rx="6" fill="#ffffff" opacity="0.9"/>
+<text x="900" y="592" font-size="21" font-weight="600" fill="#2a78d6" text-anchor="start">ABS</text>
+<text x="60" y="1540" font-size="30" font-weight="700" fill="#1a1a19" text-anchor="start">So geht's – Schritt für Schritt</text>
+<text x="60" y="1580" font-size="21" font-weight="400" fill="#1a1a19" text-anchor="start">1. Batterie abklemmen.</text>
+<text x="60" y="1612" font-size="21" font-weight="400" fill="#1a1a19" text-anchor="start">2. Das EINE Geberkabel auftrennen: Kombi-Seite → A, Geber-Seite → GEBER. B → Masse.</text>
+<text x="60" y="1644" font-size="21" font-weight="400" fill="#1a1a19" text-anchor="start">   Alten ArduinoTog-Nano ausbauen; seine Leitungen → ÖL, TOG, ABS.</text>
+<text x="60" y="1676" font-size="21" font-weight="400" fill="#1a1a19" text-anchor="start">3. +12 V (Zündungsplus, mit 1-A-Sicherung) und GND (Masse) anklemmen. Aderendhülsen verwenden!</text>
+<text x="60" y="1708" font-size="21" font-weight="400" fill="#1a1a19" text-anchor="start">4. Batterie dran, Zündung an. Per USB am Laptop einmessen (LIESMICH: ohm / hier / speichern).</text>
+<text x="60" y="1740" font-size="21" font-weight="400" fill="#1a1a19" text-anchor="start">Geber-Masse bleibt wie sie ist an der Karosserie. B: an Masse (oder an einen Masse-Pin des Kombis).</text></svg>

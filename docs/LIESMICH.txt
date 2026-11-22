@@ -1,0 +1,40 @@
+BETTY-WANDLER v1 – Tankanzeige (T3-Geber → Audi-A6-C5-Kombi) + Öltemperatur/TOG + ABS-Leuchte (ArduinoTog)
+Stand 22.11.2026 – Entwurf, noch nicht gebaut/getestet.
+
+BESTELLEN BEI JLCPCB (fertig bestückt)
+1. jlcpcb.com → „Order now“ → hardware/pcb/fertigung/Gerber-JLCPCB.zip hochladen. 2 Lagen, Dicke 2,0 mm (statt 1,6 – steifer gegen Vibration), Kupfer 2 oz (optional), Maße ~76 × 92 mm, Menge 5.
+2. „PCB Assembly“ aktivieren, Seite „Top“, Menge 2 oder 5.
+3. BOM: hardware/pcb/fertigung/BOM-JLCPCB.csv, CPL: hardware/pcb/fertigung/CPL-JLCPCB.csv hochladen.
+   LCSC-Nummern sind NICHT eingetragen: JLC schlägt passende Teile vor – je Zeile prüfen, dass Wert und Bauform stimmen
+   (PhotoMOS: AQY212GS / AQY212EH / G3VM-61A1 o. ä., SOP-4, ≥ 60 V; Buchsenleisten 1×15 2,54 mm und Schraubklemmen
+   4-pol 5,08 mm als THT-Bestückung auswählen).
+4. In der Bestückungsvorschau Lage/Drehung prüfen (Dioden-/Relais-Markierung, U1, Q1). Falsch gedrehte Teile dort drehen.
+
+AUFBAU
+- Nano mit BAUTEILEN NACH OBEN und USB NACH LINKS aufstecken (steht auch auf der Platine).
+- X1 (unten): ÖL · GEBER · GND · +12V (Zündungsplus Kl. 15).  X2 (oben): TANK-A · TANK-B · TOG · ABS → Kombi.
+  Tank: Das eine Geberkabel auftrennen – Kombi-Seite an A, Geber-Seite an GEBER, B an Masse (Geber-Masse bleibt an der Karosserie).
+- D5/ABS: Der MOSFET zieht die ABS-Leitung nach Masse (Code setzt D5 HIGH) – gleiche Wirkung wie bisher D5 LOW.
+- TOG: D6 über 1 kΩ, sonst wie bisher.
+
+EINMESSEN (USB, Serieller Monitor 115200, „Neue Zeile“)
+1. Kombi: „ohm 50“, „ohm 100“ … eingeben und notieren, welcher Wert leer/¼/½/¾/voll zeigt (Nadel ist träge, ~30 s warten).
+2. Tank: beim Tanken „status“ ablesen (Geber-Ohm) und mit „hier <i> <kombi-ohm>“ Punkte setzen (leer, ¼, ½, ¾, voll).
+3. „tabelle“ prüfen, „speichern“, „auto“.
+Öltemperatur: Schwellen/Pulse unverändert aus ArduinoTog; „status“ zeigt Rohwert + Stufe.
+
+DATEIEN (Pfade im Repo)
+hardware/pcb/betty-wandler.kicad_pcb (KiCad 9) · hardware/pcb/platine.py (erzeugt die Platine) · hardware/pcb/vorschau-*.png
+hardware/enclosure/gehaeuse-unterteil.stl / gehaeuse-deckel.stl / gehaeuse.scad (Abstandshalter für M3-Blechschrauben, Lüftungsschlitze, USB- und Klemmenöffnungen)
+firmware/betty_wandler/betty_wandler.ino (kompiliert für Nano: 10 KB Flash, 595 B RAM)
+docs/schaltplan.png · docs/anschlussplan.pdf (Werkstatt-Anschlussplan)
+
+VIBRATION / ROBUSTHEIT (Fahrzeug)
+- Platine: 2,0 mm dick bestellen, an ALLEN 4 Abstandshaltern verschrauben (M3-Blechschraube oder Einschmelzmutter 4 mm).
+- Schwerste Teile (Klemmen, Buchsenleisten, Spannungsregler) sind bestückt/gelötet, SMD-Teile sind leicht – unkritisch.
+- Schwachstelle ist der gesteckte Nano: Der Deckel hat zwei Niederhalter-Stege 2 mm über dem Nano → 2–3 mm
+  Moosgummi/Schaumstoff-Streifen dazwischenlegen, dann kann er nicht aus dem Sockel wandern.
+- Kabel mit Aderendhülsen in die Schraubklemmen, Klemmschrauben nach ~100 km nachziehen; Kabel außen am Gehäuse
+  bzw. an der Lasche mit Kabelbinder sichern (Zugentlastung).
+- Optional: Platine nach dem Test mit Schutzlack (Conformal Coating) einsprühen (Nano-Sockel abkleben).
+- Gehäuse: Befestigungslaschen links/rechts mit je 2 Langlöchern für M5. Klemmen außen beschriftet.

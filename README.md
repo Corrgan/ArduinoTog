@@ -1,18 +1,37 @@
-# ArduinoTog
-Emulation of Oil Temp Sensor signal with an arduiono
+# ArduinoTog → Betty-Wandler
 
-VAG Engines from 2000 onwards have a oil temp sensor that does not give a simple voltage but pulse in a certain pwm pattern which makes for inconvenient beeps, errors and/or broken dials in the dashboard if you install the engines or dashboards into other cars not equipped with that setup.
+Arduino Nano adapter board for fitting a **2000s VAG/Audi instrument cluster into an older car** (here: an Audi A6 C5 cluster in a VW T3 Syncro with a 1.9 TDI).
 
-Based on the work of the TinyTOG by BlackBrix here on github i wrote a -atm somewhat hacky- solution to silence the alarms and give out a real reading based on a standard oil temp sensor.
+One Nano does three jobs:
 
-# WHAT WORKS
-Right now it pulses according to a certain threshold. if no sensor is connected it defaults to 170°C Oil Temp. No warning lights, just for the dash dial. Theoretical it should work if you connect a oil temp sensor to the analog input A1, though it might need a reference voltage output by the arduino. I will test this as soon as i have it installed.
+| Function | What it does |
+|---|---|
+| **TOG / oil temperature** | Emulates the pulse-coded oil temperature sender (TOG) the cluster expects, based on a standard VW oil temp sensor (A1). No warnings, working gauge. |
+| **Fuel gauge** | Reads the original (old) tank sender (A2) and drives the cluster's fuel input through a switchable resistor network (PhotoMOS relays). The curve is calibrated over USB and stored in EEPROM. |
+| **Warning lamp output** | Open-drain output (D5, MOSFET) that can pull a cluster warning lamp line (e.g. ABS) to ground. |
 
-# TODO
-Rework the whole code. I want to have a logic with an array and a if loop, not that atrocious thing I wrote.
-Also i'm trying to get some sort of layout graphics created on how its supposed to work and connect. Bear with me ;-)
+> ⚠️ **Status: design, not yet built or road-tested** (v1, Nov 2026). Use at your own risk – this is connected to a car's wiring.
 
-# Credits
-BlackBrix/TinyTOG here on github for the initial research and logic.
-gnif from hostfission for correcting and explaining my code and what i could do better.
-ITS A WORK IN PROGRESS.
+## Repository layout
+
+```
+firmware/betty_wandler/    Arduino sketch (Nano, ATmega328P)
+hardware/pcb/              KiCad 9 board, generator script, JLCPCB fab files (gerber zip, BOM, CPL)
+hardware/enclosure/        OpenSCAD enclosure + STLs (base with M5 mounting tabs, vented lid)
+docs/                      schematic, wiring plan (PDF), build & calibration notes (German: LIESMICH.txt)
+legacy/                    the original ArduinoTog sketches
+```
+
+## Quick start
+
+1. Order the PCB (2 layers, 2.0 mm, assembled) with the files in `hardware/pcb/fertigung/` – see `docs/LIESMICH.txt`.
+2. Flash `firmware/betty_wandler/betty_wandler.ino` to an Arduino Nano.
+3. Wire it as shown in `docs/anschlussplan.pdf`.
+4. Calibrate over USB serial (115200 baud): `ohm <value>`, `hier <i> <ohm>`, `tabelle`, `speichern`, `auto`.
+
+## Credits
+
+- [BlackBrix/TinyTOG](https://github.com/BlackBrix/TinyTOG) for the initial TOG research and logic.
+- gnif (hostfission) for correcting and explaining the original code.
+
+License: GPL-3.0 (see `LICENSE`).
