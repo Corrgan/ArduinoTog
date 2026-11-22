@@ -1,37 +1,37 @@
-# ArduinoTog → Betty-Wandler
+# Betty-Wandler (vormals ArduinoTog)
 
-Arduino Nano adapter board for fitting a **2000s VAG/Audi instrument cluster into an older car** (here: an Audi A6 C5 cluster in a VW T3 Syncro with a 1.9 TDI).
+Arduino-Nano-Platine, um ein **VAG/Audi-Kombiinstrument ab ca. 2000 in ein älteres Auto** einzubauen (hier: Audi-A6-C5-Kombi in einem VW T3 Syncro mit 1.9 TDI).
 
-One Nano does three jobs:
+Ein Nano erledigt drei Aufgaben:
 
-| Function | What it does |
+| Funktion | Was sie macht |
 |---|---|
-| **TOG / oil temperature** | Emulates the pulse-coded oil temperature sender (TOG) the cluster expects, based on a standard VW oil temp sensor (A1). No warnings, working gauge. |
-| **Fuel gauge** | Reads the original (old) tank sender (A2) and drives the cluster's fuel input through a switchable resistor network (PhotoMOS relays). The curve is calibrated over USB and stored in EEPROM. |
-| **Warning lamp output** | Open-drain output (D5, MOSFET) that can pull a cluster warning lamp line (e.g. ABS) to ground. |
+| **TOG / Öltemperatur** | Emuliert den pulscodierten Öltemperaturgeber (TOG), den das Kombi erwartet – auf Basis eines normalen VW-Öltemperaturfühlers (A1). Keine Warnungen, Anzeige funktioniert. |
+| **Tankanzeige** | Liest den originalen (alten) Tankgeber (A2) und steuert den Tankeingang des Kombis über ein schaltbares Widerstandsnetz (PhotoMOS-Relais). Die Kennlinie wird per USB eingemessen und im EEPROM gespeichert. |
+| **Warnleuchten-Ausgang** | Open-Drain-Ausgang (D5, MOSFET), der eine Warnleuchten-Leitung des Kombis (z. B. ABS) nach Masse ziehen kann. |
 
-> ⚠️ **Status: design, not yet built or road-tested** (v1, Nov 2026). Use at your own risk – this is connected to a car's wiring.
+> ⚠️ **Stand: Entwurf, noch nicht gebaut oder im Fahrzeug getestet** (v1, Nov. 2026). Nutzung auf eigene Gefahr – das Ding hängt an der Fahrzeugelektrik.
 
-## Repository layout
+## Aufbau des Repos
 
 ```
-firmware/betty_wandler/    Arduino sketch (Nano, ATmega328P)
-hardware/pcb/              KiCad 9 board, generator script, JLCPCB fab files (gerber zip, BOM, CPL)
-hardware/enclosure/        OpenSCAD enclosure + STLs (base with M5 mounting tabs, vented lid)
-docs/                      schematic, wiring plan (PDF), build & calibration notes (German: LIESMICH.txt)
-legacy/                    the original ArduinoTog sketches
+firmware/betty_wandler/    Arduino-Sketch (Nano, ATmega328P)
+hardware/pcb/              KiCad-9-Platine, Generator-Skript, JLCPCB-Fertigungsdaten (Gerber-ZIP, BOM, CPL)
+hardware/enclosure/        OpenSCAD-Gehäuse + STLs (Unterteil mit M5-Laschen, Deckel mit Lüftungsschlitzen)
+docs/                      Schaltplan, Anschlussplan (PDF), Bau- und Einmess-Anleitung (LIESMICH.txt)
+legacy/                    die ursprünglichen ArduinoTog-Sketches
 ```
 
-## Quick start
+## Schnellstart
 
-1. Order the PCB (2 layers, 2.0 mm, assembled) with the files in `hardware/pcb/fertigung/` – see `docs/LIESMICH.txt`.
-2. Flash `firmware/betty_wandler/betty_wandler.ino` to an Arduino Nano.
-3. Wire it as shown in `docs/anschlussplan.pdf`.
-4. Calibrate over USB serial (115200 baud): `ohm <value>`, `hier <i> <ohm>`, `tabelle`, `speichern`, `auto`.
+1. Platine bestellen (2 Lagen, 2,0 mm, bestückt) mit den Dateien aus `hardware/pcb/fertigung/` – Details in `docs/LIESMICH.txt`.
+2. `firmware/betty_wandler/betty_wandler.ino` auf einen Arduino Nano flashen.
+3. Anschließen wie in `docs/anschlussplan.pdf`.
+4. Per USB einmessen (Serieller Monitor, 115200 Baud): `ohm <wert>`, `hier <i> <ohm>`, `tabelle`, `speichern`, `auto`.
 
-## Credits
+## Danke
 
-- [BlackBrix/TinyTOG](https://github.com/BlackBrix/TinyTOG) for the initial TOG research and logic.
-- gnif (hostfission) for correcting and explaining the original code.
+- [BlackBrix/TinyTOG](https://github.com/BlackBrix/TinyTOG) für die ursprüngliche TOG-Recherche und -Logik.
+- gnif (hostfission) fürs Korrigieren und Erklären des ersten Codes.
 
-License: GPL-3.0 (see `LICENSE`).
+Lizenz: GPL-3.0 (siehe `LICENSE`).
