@@ -1,18 +1,37 @@
-# ArduinoTog
-Emulation of Oil Temp Sensor signal with an arduiono
+# Betty-Wandler (vormals ArduinoTog)
 
-VAG Engines from 2000 onwards have a oil temp sensor that does not give a simple voltage but pulse in a certain pwm pattern which makes for inconvenient beeps, errors and/or broken dials in the dashboard if you install the engines or dashboards into other cars not equipped with that setup.
+Arduino-Nano-Platine, um ein **VAG/Audi-Kombiinstrument ab ca. 2000 in ein älteres Auto** einzubauen (hier: Audi-A6-C5-Kombi in einem VW T3 Syncro mit 1.9 TDI).
 
-Based on the work of the TinyTOG by BlackBrix here on github i wrote a -atm somewhat hacky- solution to silence the alarms and give out a real reading based on a standard oil temp sensor.
+Ein Nano erledigt drei Aufgaben:
 
-# WHAT WORKS
-Right now it pulses according to a certain threshold. if no sensor is connected it defaults to 170°C Oil Temp. No warning lights, just for the dash dial. Theoretical it should work if you connect a oil temp sensor to the analog input A1, though it might need a reference voltage output by the arduino. I will test this as soon as i have it installed.
+| Funktion | Was sie macht |
+|---|---|
+| **TOG / Öltemperatur** | Emuliert den pulscodierten Öltemperaturgeber (TOG), den das Kombi erwartet – auf Basis eines normalen VW-Öltemperaturfühlers (A1). Keine Warnungen, Anzeige funktioniert. |
+| **Tankanzeige** | Liest den originalen (alten) Tankgeber (A2) und steuert den Tankeingang des Kombis über ein schaltbares Widerstandsnetz (PhotoMOS-Relais). Die Kennlinie wird per USB eingemessen und im EEPROM gespeichert. |
+| **Warnleuchten-Ausgang** | Open-Drain-Ausgang (D5, MOSFET), der eine Warnleuchten-Leitung des Kombis (z. B. ABS) nach Masse ziehen kann. |
 
-# TODO
-Rework the whole code. I want to have a logic with an array and a if loop, not that atrocious thing I wrote.
-Also i'm trying to get some sort of layout graphics created on how its supposed to work and connect. Bear with me ;-)
+> ⚠️ **Stand: Entwurf, noch nicht gebaut oder im Fahrzeug getestet** (v1, Nov. 2026). Nutzung auf eigene Gefahr – das Ding hängt an der Fahrzeugelektrik.
 
-# Credits
-BlackBrix/TinyTOG here on github for the initial research and logic.
-gnif from hostfission for correcting and explaining my code and what i could do better.
-ITS A WORK IN PROGRESS.
+## Aufbau des Repos
+
+```
+firmware/betty_wandler/    Arduino-Sketch (Nano, ATmega328P)
+hardware/pcb/              KiCad-9-Platine, Generator-Skript, JLCPCB-Fertigungsdaten (Gerber-ZIP, BOM, CPL)
+hardware/enclosure/        OpenSCAD-Gehäuse + STLs (Unterteil mit M5-Laschen, Deckel mit Lüftungsschlitzen)
+docs/                      Schaltplan, Anschlussplan (PDF), Bau- und Einmess-Anleitung (LIESMICH.txt)
+legacy/                    die ursprünglichen ArduinoTog-Sketches
+```
+
+## Schnellstart
+
+1. Platine bestellen (2 Lagen, 2,0 mm, bestückt) mit den Dateien aus `hardware/pcb/fertigung/` – Details in `docs/LIESMICH.txt`.
+2. `firmware/betty_wandler/betty_wandler.ino` auf einen Arduino Nano flashen.
+3. Anschließen wie in `docs/anschlussplan.pdf`.
+4. Per USB einmessen (Serieller Monitor, 115200 Baud): `ohm <wert>`, `hier <i> <ohm>`, `tabelle`, `speichern`, `auto`.
+
+## Danke
+
+- [BlackBrix/TinyTOG](https://github.com/BlackBrix/TinyTOG) für die ursprüngliche TOG-Recherche und -Logik.
+- gnif (hostfission) fürs Korrigieren und Erklären des ersten Codes.
+
+Lizenz: GPL-3.0 (siehe `LICENSE`).

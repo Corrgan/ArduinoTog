@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" font-family="DejaVu Sans, sans-serif"><rect width="1500" height="1000" fill="#fcfcfb"/>
+<text x="30" y="42" font-size="28" font-weight="700" fill="#1a1a19">Betty-Wandler – Schaltplan Entwurf 1 (Tankgeber + Öltemperatur/TOG)</text>
+<text x="30" y="70" font-size="16" fill="#6b6a64">Arduino Nano gesteckt · JLCPCB bestückt · Werte/Teile vorläufig, Pinbelegung D5/D6/A1 wie ArduinoTog</text>
+<rect x="30" y="110" width="230" height="200" rx="8" fill="#ffffff" stroke="#1a1a19" stroke-width="2"/>
+<text x="42" y="136" font-size="18" font-weight="600" fill="#1a1a19">X1 Klemme Eingang</text>
+<text x="42" y="162" font-size="15" fill="#1a1a19">1  +12 V (Zündung, Kl. 15)</text>
+<text x="42" y="184" font-size="15" fill="#1a1a19">2  Masse (Kl. 31)</text>
+<text x="42" y="206" font-size="15" fill="#1a1a19">3  Tankgeber T3</text>
+<text x="42" y="228" font-size="15" fill="#1a1a19">4  Öltemperatur-Fühler</text>
+<rect x="30" y="700" width="230" height="200" rx="8" fill="#ffffff" stroke="#1a1a19" stroke-width="2"/>
+<text x="42" y="726" font-size="18" font-weight="600" fill="#1a1a19">X2 Klemme Ausgang</text>
+<text x="42" y="752" font-size="15" fill="#1a1a19">1  Kombi Tank A</text>
+<text x="42" y="774" font-size="15" fill="#1a1a19">2  Kombi Tank B</text>
+<text x="42" y="796" font-size="15" fill="#1a1a19">3  TOG-Signal → Kombi</text>
+<text x="42" y="818" font-size="15" fill="#1a1a19">4  D5 (IMMER, LOW)</text>
+<rect x="330" y="110" width="360" height="210" rx="8" fill="#ffffff" stroke="#1a1a19" stroke-width="2"/>
+<text x="342" y="136" font-size="18" font-weight="600" fill="#1a1a19">Versorgung</text>
+<text x="342" y="162" font-size="15" fill="#1a1a19">F1  PTC 500 mA (1812)</text>
+<text x="342" y="184" font-size="15" fill="#1a1a19">D1  SS34 Verpolschutz</text>
+<text x="342" y="206" font-size="15" fill="#1a1a19">D2  SMBJ24A TVS (Lastabwurf)</text>
+<text x="342" y="228" font-size="15" fill="#1a1a19">C1  10 µF/50 V</text>
+<text x="342" y="250" font-size="15" fill="#1a1a19">U1  L78M05 (TO-252) → +5 V</text>
+<text x="342" y="272" font-size="15" fill="#1a1a19">C2/C3  10 µF + 100 nF</text>
+<path d="M260,165 L330,165" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="299.0" y="159.0" font-size="14" fill="#6b6a64">+12V</text>
+<rect x="760" y="300" width="300" height="400" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<text x="772" y="326" font-size="18" font-weight="600" fill="#1a1a19">Arduino Nano (Sockel)</text>
+<text x="772" y="352" font-size="15" fill="#1a1a19">+5V  ← U1 (Pin 27)</text>
+<text x="772" y="374" font-size="15" fill="#1a1a19">GND  (Pin 4, 29)</text>
+<text x="772" y="396" font-size="15" fill="#1a1a19">A0   ← Tankgeber</text>
+<text x="772" y="418" font-size="15" fill="#1a1a19">A1   ← Öltemperatur</text>
+<text x="772" y="440" font-size="15" fill="#1a1a19">D2–D4, D7–D11 → 8 Relais</text>
+<text x="772" y="462" font-size="15" fill="#1a1a19">D6   → TOG-Ausgang</text>
+<text x="772" y="484" font-size="15" fill="#1a1a19">D5   → IMMER (LOW)</text>
+<text x="772" y="506" font-size="15" fill="#1a1a19">USB  zum Programmieren</text>
+<text x="772" y="528" font-size="15" fill="#1a1a19">      und Kalibrieren</text>
+<path d="M690,215 L910,215 L910,300" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="804.0" y="209.0" font-size="14" fill="#6b6a64">+5V</text>
+<rect x="330" y="380" width="360" height="150" rx="8" fill="#ffffff" stroke="#1a1a19" stroke-width="2"/>
+<text x="342" y="406" font-size="18" font-weight="600" fill="#1a1a19">Eingang Tankgeber</text>
+<text x="342" y="432" font-size="15" fill="#1a1a19">R1 150 Ω nach +5 V (Geber nach Masse)</text>
+<text x="342" y="454" font-size="15" fill="#1a1a19">R2 10 kΩ + C4 100 nF → A0</text>
+<text x="342" y="476" font-size="15" fill="#1a1a19">D3 SMAJ5.0CA Schutz</text>
+<path d="M260,205 L300,205 L300,450 L330,450" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="284.0" y="199.0" font-size="14" fill="#6b6a64">Geber</text>
+<path d="M690,450 L760,450" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="729.0" y="444.0" font-size="14" fill="#6b6a64">A0</text>
+<rect x="330" y="560" width="360" height="120" rx="8" fill="#ffffff" stroke="#1a1a19" stroke-width="2"/>
+<text x="342" y="586" font-size="18" font-weight="600" fill="#1a1a19">Eingang Öltemperatur</text>
+<text x="342" y="612" font-size="15" fill="#1a1a19">R3 1 kΩ nach +5 V (wie ArduinoTog)</text>
+<text x="342" y="634" font-size="15" fill="#1a1a19">R4 10 kΩ + C5 100 nF → A1</text>
+<text x="342" y="656" font-size="15" fill="#1a1a19">D4 SMAJ5.0CA Schutz</text>
+<path d="M260,225 L285,225 L285,620 L330,620" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="276.5" y="219.0" font-size="14" fill="#6b6a64">Öl</text>
+<path d="M690,620 L760,620" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="729.0" y="614.0" font-size="14" fill="#6b6a64">A1</text>
+<rect x="1130" y="110" width="340" height="560" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+<text x="1142" y="136" font-size="18" font-weight="600" fill="#1a1a19">Widerstands-Kette Tank</text>
+<text x="1142" y="162" font-size="15" fill="#1a1a19">8 Widerstände in Reihe:</text>
+<text x="1142" y="184" font-size="15" fill="#1a1a19">2,0 · 3,9 · 8,2 · 16 Ω</text>
+<text x="1142" y="206" font-size="15" fill="#1a1a19">33 · 62 · 130 · 270 Ω</text>
+<text x="1142" y="228" font-size="15" fill="#1a1a19">= 0 … ~525 Ω einstellbar</text>
+<text x="1142" y="250" font-size="15" fill="#1a1a19"></text>
+<text x="1142" y="272" font-size="15" fill="#1a1a19">jeder überbrückt von einem</text>
+<text x="1142" y="294" font-size="15" fill="#1a1a19">PhotoMOS-Relais K1–K8</text>
+<text x="1142" y="316" font-size="15" fill="#1a1a19">(AQY212GS, SOP-4, Ron ≈ 1 Ω)</text>
+<text x="1142" y="338" font-size="15" fill="#1a1a19"></text>
+<text x="1142" y="360" font-size="15" fill="#1a1a19">Relais-LED: Arduino-Pin</text>
+<text x="1142" y="382" font-size="15" fill="#1a1a19">→ 470 Ω → LED → Masse</text>
+<text x="1142" y="404" font-size="15" fill="#1a1a19"></text>
+<text x="1142" y="426" font-size="15" fill="#1a1a19">Kombi sieht zwischen A und B</text>
+<text x="1142" y="448" font-size="15" fill="#1a1a19">genau den gewählten Widerstand,</text>
+<text x="1142" y="470" font-size="15" fill="#1a1a19">galvanisch getrennt vom Arduino</text>
+<path d="M1060,400 L1130,400" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="1099.0" y="394.0" font-size="14" fill="#6b6a64">8× Steuer</text>
+<path d="M1300,670 L1300,760 L260,760" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="1304.0" y="709.0" font-size="14" fill="#6b6a64">Tank A/B</text>
+<rect x="330" y="720" width="360" height="150" rx="8" fill="#ffffff" stroke="#1a1a19" stroke-width="2"/>
+<text x="342" y="746" font-size="18" font-weight="600" fill="#1a1a19">TOG-Ausgang (ArduinoTog)</text>
+<text x="342" y="772" font-size="15" fill="#1a1a19">D6 → R5 220 Ω → X2/3</text>
+<text x="342" y="794" font-size="15" fill="#1a1a19">(optional Transistor-Bestückung,</text>
+<text x="342" y="816" font-size="15" fill="#1a1a19"> je nach Kombi-Eingang – offen)</text>
+<text x="342" y="838" font-size="15" fill="#1a1a19">D5 → R6 220 Ω → X2/4</text>
+<path d="M760,650 L720,650 L720,790 L690,790" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="744.0" y="644.0" font-size="14" fill="#6b6a64">D5/D6</text>
+<path d="M330,800 L260,800" fill="none" stroke="#1a1a19" stroke-width="2"/>
+<text x="30" y="960" font-size="15" fill="#6b6a64">Offen: Funktion D5, TOG direkt oder über Transistor, Typ/Widerstand Ölfühler, Widerstandsbereiche Tankgeber/Kombi (per Kalibrier-Modus einmessbar).</text></svg>
